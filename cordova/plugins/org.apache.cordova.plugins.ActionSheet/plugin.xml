@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="org.apache.cordova.plugins.ActionSheet" version="1.0.0">
+	<name>ActionSheet</name>
+	<platform name="ios">
+		<js-module src="www/ActionSheet.js" name="actionSheet">
+			<clobbers target="actionSheet" />
+		</js-module>
+		<config-file target="config.xml" parent="/*">
+			<feature name="ActionSheet">
+				<param name="ios-package" value="ActionSheet"/>
+			</feature>
+		</config-file>
+		<plugins-plist key="ActionSheet" />
+		<header-file src="src/ios/ActionSheet.h" />
+		<source-file src="src/ios/ActionSheet.m" />
+	</platform>
+</plugin>
